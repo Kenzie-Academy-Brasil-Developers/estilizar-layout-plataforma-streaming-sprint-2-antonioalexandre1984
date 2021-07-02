@@ -15,25 +15,149 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 */
 
 /* VARIÁVEIS */
-:root{
-  
+:root {
+  --gray8: #141414;
+  --gray0: #a6a6a6;
+  --white: #ffffff;
+  --fundo: #00002e;
+}
+
+* {
+  margin: auto;
+  max-width: 720px;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 /*BODY*/
-	body{
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  background-color: var(--fundo);
+}
 
-	}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header {
+  width: 100%;
+  height: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+  color: var(--white);
+  font-size: 40px;
+  max-width: 100%;
+  height: 50px;
+  
+}
+
+h3 {
+  font-weight: 100%;
+  color: var(--white);
+  font-size: 20px;
+ 
+}
 
 /*TOPO*/
-	header.topo{
-		
-	}
+header.topo {
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin-left: 10px;
+}
 
 /*RODAPÉ*/
-	
 
 /*PÁGINA INICIAL*/
-	div.pg-home{
-		
-	}
+div.pg-home {
+ 
+  padding: 0 2%;
+  display: flex;
+}
 
+.item {
+  display: block;
+  justify-content: center;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  order: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+  
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  width: 858px;
+  list-style: none;
+}
+
+li {
+  width: 186px;
+}
+figcaption {
+  position: absolute;
+  visibility: hidden;
+}
+
+.addPerfil {
+  height: 200px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; 
+  margin: 10px;
+  width: 186px;
+}
+
+.addPerfil.item {
+  cursor: pointer;
+}
+
+button {
+  font-family:'Helvetica Neue','Helvetica','Arial,sans-serif';
+  margin-top: 50px;
+  background-color: var(--fundo);
+  color: var(--gray0);
+  border: ridge thick var(--gray0);
+  border-radius: 0px;
+  height: 40px;
+  width: 40%;
+  text-shadow: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+}
+
+footer {
+
+  position: relative;
+  margin-left: 10px;
+  width: auto;
+  display: flex; 
+}
+
+@media (max-width: 720px){
+  .item,.addPerfil.item,.addPerfil,ul,h2,h3,li
+   {
+    align-items: center;
+    flex-shrink:3;
+    flex-wrap: no-wrap;
+    align-items: stretch;
+    width: 100%;
+   }
+}
